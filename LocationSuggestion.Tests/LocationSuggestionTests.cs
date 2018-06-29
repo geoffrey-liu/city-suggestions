@@ -39,5 +39,13 @@ namespace LocationSuggestion.Tests
 
             Assert.AreEqual(3, locations.Count);
         }
+
+        [Test]
+        public void GetLocationsOneParam()
+        {
+            List<Location> locations = locationPersistence.GetLocations("a", 10.0f, null).ToList();
+
+            Assert.AreEqual(3, locations.Count);
+        }
     }
 }
